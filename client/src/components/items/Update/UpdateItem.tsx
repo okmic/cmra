@@ -1,13 +1,14 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useState } from "react";
 import { useInput } from "../../../hooks/useInputs";
 import { PropsUpdateItemType } from "./types"
-import { updateName, updateCounterparty, updateCity, updateAdress, updateDescription, updateEmail, updateSite, CounterpartyType } from "../../../redux/reducer/counterpartysReducer"
+import { updateName, updateCounterparty, updateCity, updateAdress, updateDescription, updateEmail, updateSite } from "../../../redux/reducer/counterpartysReducer"
 import BorderColorIcon from '@mui/icons-material/BorderColor'
 import styles from '../index.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
+import { Button } from "@mui/material";
 
-export default memo(function UpdateItem({ id }: PropsUpdateItemType) {
+export default memo(function UpdateItem({ id, setId, setCheck}: PropsUpdateItemType) {
 
     const data = useSelector((state: RootState) => state.counterpartys.counterpartys).filter((item) => item.id === id)
 
@@ -46,13 +47,17 @@ export default memo(function UpdateItem({ id }: PropsUpdateItemType) {
         { title: 'ФИО или произвольное название:', value: data[0]['name'], paramsInput: name, order: nameOr, callback: setName, redux: updateName },
         { title: 'Контрагент:', value: data[0]['counterparty'], paramsInput: counterparty, order: countOr, callback: setCount, redux: updateCounterparty },
         { title: 'Город/населенный пункт:', value: data[0]['city'], paramsInput: city, order: cityOr, callback: setCity, redux: updateCity },
-        { title: 'Адресс:', value: data[0]['adress'], paramsInput: adress, order: adressOr, callback: setAdress, redux: updateAdress },
+        { title: 'Адрес:', value: data[0]['adress'], paramsInput: adress, order: adressOr, callback: setAdress, redux: updateAdress },
         { title: 'Email:', value: data[0]['email'], paramsInput: email, order: emailOr, callback: setEmail, redux: updateEmail },
         { title: 'Сайт:', value: data[0]['site'], paramsInput: site, order: siteOr, callback: setSite, redux: updateSite },
         { title: 'Особый список:', value: data[0]['description'], paramsInput: description, order: descriptionOr, callback: setDescription, redux: updateDescription }
     ]
 
     return <>
+        <Button onClick={() => {
+            setId(null)
+            setCheck(false)
+        }} sx={{marginTop: '1em'}} variant="contained">Записать и закрыть</Button>
         {items.map((item, index) => <div className={styles.item} key={index} >
             <h5>{item.title}</h5>
             {!item.order
@@ -72,8 +77,6 @@ export default memo(function UpdateItem({ id }: PropsUpdateItemType) {
                             <textarea className="m1" {...item.paramsInput}></textarea>
                             <button onClick={() => hundleSubmit({id: data[0]['id'], callback: item.callback, redux: item.redux, input: item.paramsInput })}>Изменить</button>
                         </div>}
-
-
                 </div>}
         </div>
         )}

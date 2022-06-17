@@ -37,6 +37,12 @@ export const counterpartysReducer = createSlice({
   name: 'counterparty',
   initialState,
   reducers: {
+    add: (state, action) => {
+      state.counterpartys.push({id: state.counterpartys.length + 1, ...action.payload});
+    },
+    remove: (state, action) => {
+      state.counterpartys.splice(state.counterpartys.findIndex((arrow) => arrow.id === action.payload), 1);
+    },
     updateName: (state, action) => {
       state.counterpartys.forEach(item =>{
         if( item.id === action.payload.id)
@@ -83,6 +89,6 @@ export const counterpartysReducer = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { updateName, updateCounterparty, updateCity, updateAdress, updateDescription, updateEmail, updateSite} = counterpartysReducer.actions
+export const {add, remove, updateName, updateCounterparty, updateCity, updateAdress, updateDescription, updateEmail, updateSite} = counterpartysReducer.actions
 
 export default counterpartysReducer.reducer

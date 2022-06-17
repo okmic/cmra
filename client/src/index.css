@@ -10,6 +10,7 @@ html, body {
   background-position: center center;
   color: black
 }
+
 .App {
   min-height: 100%;
   display: flex;

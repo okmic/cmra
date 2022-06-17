@@ -1,13 +1,10 @@
 .wrapper {
-    border: 3px double black;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
 }
-.wrapper button {
-    margin: 0 -3px -3px -3px ;
-}
+
 .item {
     display: flex;
     flex-direction: column;

@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/cmra/static/css/main.0556517d.css",
-    "main.js": "/cmra/static/js/main.fddd889b.js",
+    "main.js": "/cmra/static/js/main.29903d02.js",
     "static/js/787.c4e7f8f9.chunk.js": "/cmra/static/js/787.c4e7f8f9.chunk.js",
     "static/media/background.jpg": "/cmra/static/media/background.ef3e6709a1442aa689d3.jpg",
     "index.html": "/cmra/index.html",
     "main.0556517d.css.map": "/cmra/static/css/main.0556517d.css.map",
-    "main.fddd889b.js.map": "/cmra/static/js/main.fddd889b.js.map",
+    "main.29903d02.js.map": "/cmra/static/js/main.29903d02.js.map",
     "787.c4e7f8f9.chunk.js.map": "/cmra/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0556517d.css",
-    "static/js/main.fddd889b.js"
+    "static/js/main.29903d02.js"
   ]
 }

@@ -1,10 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import React, { memo, useState } from 'react';
+import React, { memo } from 'react';
 import reportWebVitals from './reportWebVitals'
 import './index.css';
 import { useRoutes } from './hooks/routes'
 import { BrowserRouter } from 'react-router-dom'
-import { FakeLogin } from './types';
 
 //redux
 import { store } from './redux/store'
@@ -14,8 +13,8 @@ import { Provider } from 'react-redux'
 
 const App = memo(() => {
 
-  const [fakeLogin, setLogin] = useState<FakeLogin>({} as FakeLogin)
-  const routes = useRoutes(fakeLogin?.login === 'admin' && fakeLogin.password === 'admin' ? true : false)
+
+  const routes = useRoutes()
 
   return <BrowserRouter>
         {routes}

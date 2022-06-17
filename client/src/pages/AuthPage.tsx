@@ -1,9 +1,10 @@
-import { useContext, useState } from "react"
-import { DataContext } from "../context/dataContext"
+import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { auth } from "../redux/reducer/authReducer"
 
 export const AuthPage = () => {
 
-    const {setLogin} = useContext(DataContext)
+    const dispatch = useDispatch()
     
     const [form, setForm] = useState({login: "", password: ""})
 
@@ -25,6 +26,6 @@ export const AuthPage = () => {
             />
             <button 
             className="textField"
-             onClick={() => setLogin(form)}>Войти</button>
+             onClick={() => dispatch(auth(form))}>Войти</button>
         </div>
 }

@@ -1,18 +1,21 @@
+import { useSelector } from "react-redux"
 import { Route, Routes } from "react-router-dom"
+import { urlRoute } from "../config"
 import { AuthPage } from "../pages/AuthPage"
 import MainPage from "../pages/MainPage"
+import { RootState } from "../redux/store"
 
 
-export const useRoutes = (isAuth: boolean) => {
+export const useRoutes = () => {
 
-    const isAuthFake = true
+    const auth = useSelector((state: RootState) => state.auth.auth)
 
-    if (isAuthFake) {
+    if (auth) {
         return <Routes>
-            <Route path="/*" element={<MainPage />} />
+            <Route path={urlRoute + "/*"} element={<MainPage />} />
         </Routes>
     } 
     return <Routes>
-        <Route path="/*" element={<AuthPage />} />
+        <Route path={urlRoute + "/*"}  element={<AuthPage />} />
     </Routes>
 }

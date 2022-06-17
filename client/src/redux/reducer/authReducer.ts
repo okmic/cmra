@@ -6,7 +6,7 @@ export interface authType {
 }
 
 const initialState: authType = {
-  auth: false
+  auth: true
 }
 
 export const authReducer = createSlice({

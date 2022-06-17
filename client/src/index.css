@@ -37,7 +37,9 @@ html, body {
   padding: 5px;
   
 }
-
+.p1 {
+  padding: 1em;
+}
 .m1 {
   margin: 1em;
 }
@@ -46,4 +48,14 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.dfsb {
+  display: flex;
+}
+.bb {
+  border-bottom: 1px solid #000;
+}
+.mb {
+  margin-bottom: 1em;
 }

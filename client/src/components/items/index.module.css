@@ -1,10 +1,12 @@
 .wrapper {
     border: 3px double black;
-    max-width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+}
+.wrapper button {
+    margin: 0 -3px -3px -3px ;
 }
 .item {
     display: flex;

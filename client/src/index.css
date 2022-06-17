@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #0f0b02;
+}
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.WrapperInputs {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #272219;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

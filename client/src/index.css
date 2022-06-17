@@ -10,7 +10,9 @@ html, body {
   background-position: center center;
   color: black
 }
-
+a {
+  text-decoration: none;
+}
 .App {
   min-height: 100%;
   display: flex;

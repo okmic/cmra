@@ -29,7 +29,27 @@ const initialState: CounterState = {
       site: 'www.skga.ru',
       description: '',
       main: true
-    }
+    },
+    {
+      id: 2,
+      name: 'Гогуев Ахмат Расулович',
+      counterparty: 'ИП Гогуев Ахмат Расулович',
+      city: 'Черкесск',
+      adress: 'ул. Демиденко, 63',
+      email: 'ahmat.rasulovich@list.ru',
+      site: 'www.gogu.ru',
+      description: ''
+    },
+    {
+      id: 3,
+      name: 'Лапшина Валерия Александровна',
+      counterparty: 'ООО Сайбек',
+      city: 'Ставрополь',
+      adress: 'ул. Победы, 44',
+      email: 'lavaa_03@mail.ru',
+      site: 'www.saibek.ru',
+      description: ''
+    },
   ]
 }
 

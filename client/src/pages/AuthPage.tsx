@@ -8,20 +8,23 @@ export const AuthPage = () => {
     const [form, setForm] = useState({login: "", password: ""})
 
         return <div className="WrapperInputs" style={{color: 'white'}} >
-            <h1>career-guidance</h1>
-            <input 
+            <h1>Авторизация</h1>
+            <input
+            className="textField" 
             type="text" 
             value={form.login} 
             onChange={(e) => setForm({...form, login: e.target.value})} 
-            placeholder="login"
+            placeholder="Логин"
             />
-            <input 
+            <input
+            className="textField" 
             type="password" 
             value={form.password} 
             onChange={(e) => setForm({...form, password: e.target.value})} 
-            placeholder="password"
+            placeholder="Пароль"
             />
             <button 
-             onClick={() => setLogin(form)}>In</button>
+            className="textField"
+             onClick={() => setLogin(form)}>Войти</button>
         </div>
 }

@@ -3,7 +3,12 @@ html, body {
   padding: 0;
   height: 100%;
   box-sizing: border-box;
-  background-color: #0f0b02;
+  background-color: #fffdf7;
+  background-image: url(./img/background.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: black
 }
 .App {
   min-height: 100%;
@@ -19,9 +24,26 @@ html, body {
 .WrapperInputs {
   width: 100%;
   min-height: 100vh;
-  background-color: #272219;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.WrapperInputs h1 {
+  color: black
+}
+.textField {
+  margin-bottom: 1em;
+  padding: 5px;
+  
+}
+
+.m1 {
+  margin: 1em;
+}
+
+.fdc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

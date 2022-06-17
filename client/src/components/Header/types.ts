@@ -1,1 +1,3 @@
-export type  Type = {}
+export type  NavDataType = {
+    item: any
+}
